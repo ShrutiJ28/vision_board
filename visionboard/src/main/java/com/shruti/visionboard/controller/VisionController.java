@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "https://visionboardshruti.netlify.app")
 @RequestMapping("/api/vision")
 public class VisionController {
 
