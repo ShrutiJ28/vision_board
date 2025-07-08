@@ -6,7 +6,7 @@ const PrintBoard = () => {
   const [imageMap, setImageMap] = useState({});
   const [imagesLoaded, setImagesLoaded] = useState(0);
 
-  const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/api`;
+  const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
 
   // Fetch images for all vision items
   useEffect(() => {

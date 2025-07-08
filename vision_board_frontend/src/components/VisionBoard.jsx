@@ -14,7 +14,7 @@ const VisionBoard = () => {
   const { data, isError, refreshData, markAsAchieved, deleteItem } = useContext(AppContext);
   const [visions, setVisions] = useState([]);
 
-  const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/api`;
+  const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
   useEffect(() => {
     const fetchImages = async () => {
       if (!data) return;
