@@ -6,6 +6,8 @@ const PrintBoard = () => {
   const [imageMap, setImageMap] = useState({});
   const [imagesLoaded, setImagesLoaded] = useState(0);
 
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   // Fetch images for all vision items
   useEffect(() => {
     if (data.length === 0) return;
@@ -14,7 +16,7 @@ const PrintBoard = () => {
       const map = {};
       for (let vision of data) {
         try {
-          const res = await fetch(`http://localhost:8080/api/vision/${vision.id}/image`);
+          const res = await fetch(`${BASE_URL}/api/vision/${vision.id}/image`);
           const blob = await res.blob();
           map[vision.id] = URL.createObjectURL(blob);
         } catch (err) {

@@ -7,18 +7,20 @@ const priorityColors = {
   Low: "#2ecc71",
 };
 
+const baseURL = process.env.REACT_APP_API_BASE_URL;
+
 const Archive = () => {
   const [achievedItems, setAchievedItems] = useState([]);
 
   useEffect(() => {
     const fetchAchievedGoals = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/vision/achieved");
+        const response = await axios.get(`${baseURL}/vision/achieved`);
         const updated = await Promise.all(
           response.data.map(async (item) => {
             try {
               const imgRes = await axios.get(
-                `http://localhost:8080/api/vision/${item.id}/image`,
+                `${baseURL}/vision/${item.id}/image`,
                 { responseType: "blob" }
               );
               const imageUrl = URL.createObjectURL(imgRes.data);

@@ -16,11 +16,11 @@ const UpdateVisionItem = () => {
   });
 
   const [image, setImage] = useState(null);
-
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
   useEffect(() => {
     const fetchVision = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/vision/${id}`);
+        await axios.get(`${BASE_URL}/api/vision/${id}`);
         setVision(response.data);
       } catch (error) {
         console.error("Failed to fetch vision item:", error);
