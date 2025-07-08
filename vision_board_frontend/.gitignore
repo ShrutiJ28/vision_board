@@ -1,0 +1,15 @@
+# Node modules & cache
+node_modules/
+.cache/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# IDE / OS files
+.DS_Store
+*.log
