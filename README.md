@@ -15,19 +15,3 @@ A clean and beautiful app to visualize your goals with affirmations, priorities,
 
 ---
 
-## 📁 Folder Structure
-
-```txt
-/src
-  ├── components/
-  │   ├── AddVisionItem.jsx
-  │   ├── Archive.jsx
-  │   ├── Navbar.jsx
-  │   ├── PrintBoard.jsx
-  │   ├── UpdateVisionItem.jsx
-  │   └── VisionBoard.jsx
-  ├── Context/
-  │   └── Context.js
-  ├── assets/
-  ├── App.jsx
-  ├── index.js
