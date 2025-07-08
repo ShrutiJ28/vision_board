@@ -14,7 +14,7 @@ const VisionBoard = () => {
   const { data, isError, refreshData, markAsAchieved, deleteItem } = useContext(AppContext);
   const [visions, setVisions] = useState([]);
 
-  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/api`;
   useEffect(() => {
     const fetchImages = async () => {
       if (!data) return;
@@ -23,7 +23,7 @@ const VisionBoard = () => {
         data.map(async (item) => {
           try {
             const response = await axios.get(
-              `${BASE_URL}/api/vision/${item.id}/image`,
+              `${BASE_URL}/vision/${item.id}/image`,
               { responseType: "blob" }
             );
             const imageUrl = URL.createObjectURL(response.data);
