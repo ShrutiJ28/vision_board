@@ -16,7 +16,8 @@ const UpdateVisionItem = () => {
   });
 
   const [image, setImage] = useState(null);
-  const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
+  //const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
+  const BASE_URL = 'https://vision-board-af04.onrender.com/api';
   useEffect(() => {
     const fetchVision = async () => {
       try {

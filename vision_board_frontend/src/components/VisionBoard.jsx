@@ -14,7 +14,8 @@ const VisionBoard = () => {
   const { data, isError, refreshData, markAsAchieved, deleteItem } = useContext(AppContext);
   const [visions, setVisions] = useState([]);
 
-  const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
+  //const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
+  const BASE_URL = 'https://vision-board-af04.onrender.com/api';
   useEffect(() => {
     const fetchImages = async () => {
       if (!data) return;

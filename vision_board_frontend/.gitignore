@@ -3,7 +3,7 @@ node_modules/
 .cache/
 
 # Build output
-dist/
+# dist/
 build/
 
 # IDE / OS files
